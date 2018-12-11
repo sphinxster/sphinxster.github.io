@@ -13,8 +13,6 @@
 
   
   
-    <link rel="shortcut icon" href="../_static/favicon-16x16.png"/>
-  
   
   
 
@@ -54,9 +52,6 @@
             <a href="../index.html" class="icon icon-home"> OTC-TCS Documentation Template
           
 
-          
-            
-            <img src="../_static/logo_white_200w.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -204,82 +199,6 @@
             
   <div class="section" id="introduction-to-the-pn-project">
 <span id="introduction"></span><h1>Introduction to the Read-The-Docs Example Project<a class="headerlink" href="#introduction-to-the-pn-project" title="Permalink to this headline">¶</a></h1>
-<p>Test graphviz drawing from mft.dot</p>
-digraph G {
-  bgcolor=&quot;transparent&quot;;
-  node [fontsize=10 shape=record]
-  node [fontsize=10]
-  rankdir=LR
-
-  bin_complete [label=&quot;&lt;ext&gt;Extended Manifest\n(unsigned)
-                  |&lt;mft&gt;Manifest\n(signed)|&lt;bins&gt;Binaries&quot;]
-
-  mft [label=&quot;&lt;hdr&gt;CSE Header
-        |CSS Header (Type 4)\nmodule_type = 4\n...
-        |&lt;mcb&gt;ManifestCryptoBlock
-        |PlatformFirmware\nAuthenticationExtension
-        |...other extensions...
-        |AdspMetadataFileExtension
-        |...alignment...
-        |AdspFwBinaryDesc&quot;]
-
-  mcb [label=&quot;ManifestRSAKey\nmodulus\nexponent
-        |Signature&quot;]
-
-  bin_complete:mft -&gt; mft:hdr
-  mft:mcb -&gt; mcb
-
-}
-<p>Test another graphviz drawing from repo_sync.dot</p>
-digraph repo_sync {
-   bgcolor=&quot;transparent&quot;;
-   rankdir=LR
-	compound=true;
-	node [fontsize=10, shape=record, style=rounded];
-	edge [fontsize=10];
-
-
-	subgraph clusterPublic {
-		label=&quot;sound-open-firmware&quot;; fontsize=10;
-
-		subgraph clusterPubMaster {
-			label=&quot;master\n(RW)&quot;; fontsize=11;
-			style=&quot;filled,rounded&quot;; color=&quot;#F0F0F0&quot;
-
-			c1 -&gt; c2 -&gt; c3 -&gt; c4;
-
-		}
-
-		subgraph clusterPubabcProd {
-			label=&quot;abc_prod\n(RO replica)&quot;; fontsize=11;
-			style=&quot;filled,rounded&quot;; color=&quot;#F0F0FF&quot;
-
-			node [style=&quot;rounded,dashed&quot;];
-
-			abc_c4 [label=&quot;c4 [REL1]&quot;];
-			abc_c1 -&gt; abc_c2 -&gt; abc_c3 -&gt; abc_c4;
-		}
-	}
-}
-<p>And a test of plantuml from ssp.pu</p>
-<p class="plantuml">
-<img src="../_images/plantuml-b867dd9db879f71c18b285cd0bdc278d6b5a2931.png" alt="skinparam backgroundcolor transparent
-component dai
-package drivers {
-  component &quot;apl-ssp&quot; as ssp
-}
-database &quot;.data&quot; {
-  component &quot;struct dai ssp[3]&quot; as d_ssp
-}
-database &quot;.rodata&quot; {
-  component ssp_ops
-}
-
-dai ..&gt; d_ssp : expose via dai_get()
-d_ssp -&gt; ssp_ops : links to
-ssp ..&gt; ssp_ops : provide
-" />
-</p>
 </div>
 
 
@@ -294,7 +213,7 @@ ssp ..&gt; ssp_ops : provide
   <div role="contentinfo">
     <p>
         &copy; Copyright 2018, OTC-TCS Documentation Template.
-      Last updated on Dec 05, 2018.
+      Last updated on Dec 10, 2018.
 
     </p>
   </div> 
