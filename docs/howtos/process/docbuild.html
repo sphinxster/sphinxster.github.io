@@ -204,7 +204,7 @@
             
   <div class="section" id="documentation-generation">
 <span id="doc-gen"></span><h1>Documentation Generation<a class="headerlink" href="#documentation-generation" title="Permalink to this headline">¶</a></h1>
-<p>These instructions will walk you through generating the Read-The-Docs Example Project&#8217;s
+<p>These instructions will walk you through generating the Read-The-Docs Example Project’s
 documentation and publishing it to the <a class="reference external" href="https://github.com/sphinxus">documentation site</a>.
 You can also use these instructions to generate the Read-The-Docs Example documentation
 on your local system.</p>
@@ -218,7 +218,7 @@ can generate the HTML content and view it with a web browser directly on
 your workstation.</p>
 <p>You can read details about <a class="reference external" href="http://sphinx-doc.org/rest.html">reStructuredText</a>, and <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> from
 their respective websites.</p>
-<p>The project&#8217;s documentation contains the following items:</p>
+<p>The project’s documentation contains the following items:</p>
 <ul class="simple">
 <li>ReStructuredText source files used to generate documentation found at the
 <a class="reference external" href="http://thesofproject.github.io">http://thesofproject.github.io</a> website. All of the reStructuredText sources
@@ -230,29 +230,29 @@ material.</p>
 </div>
 <div class="section" id="set-up-the-documentation-working-folders">
 <h2>Set up the documentation working folders<a class="headerlink" href="#set-up-the-documentation-working-folders" title="Permalink to this headline">¶</a></h2>
-<p>You&#8217;ll need git installed to get the working folders set up:</p>
+<p>You’ll need git installed to get the working folders set up:</p>
 <ul>
 <li><p class="first">For an Ubuntu development system use:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo apt-get install git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install git
 </pre></div>
 </div>
 </li>
 <li><p class="first">For a Fedora development system use</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo dnf install git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo dnf install git
 </pre></div>
 </div>
 </li>
 </ul>
 <p>We use github.io
 for publishing the generated documentation.
-Here&#8217;s the recommended local folder setup for documentation contributions
+Here’s the recommended local folder setup for documentation contributions
 and generation:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>project-name/
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>project-name/
    document-repo/
 </pre></div>
 </div>
-<p>The parent folder <code class="docutils literal"><span class="pre">project-name</span></code> is there to make room for the
-publishing area that will come later.  It&#8217;s best if the <code class="docutils literal"><span class="pre">document-repo</span></code>
+<p>The parent folder <code class="docutils literal notranslate"><span class="pre">project-name</span></code> is there to make room for the
+publishing area that will come later.  It’s best if the <code class="docutils literal notranslate"><span class="pre">document-repo</span></code>
 folder is an ssh clone of your personal fork of the upstream project
 repos (though https clones work too):</p>
 <ol class="arabic">
@@ -265,24 +265,24 @@ fork of the repo to your personal GitHub account.</p>
 </li>
 <li><p class="first">At a command prompt, create the working folder and clone
 the <a class="reference external" href="https://github.com/sphinxus/rtd-example">documentation repo</a> to your local computer (and if you
-have publishing rights, the <a class="reference external" href="https://github.com/sphinxus">documentation site</a>). If you don&#8217;t have
-publishing rights, you&#8217;ll still be able to generate the docs locally, but
+have publishing rights, the <a class="reference external" href="https://github.com/sphinxus">documentation site</a>). If you don’t have
+publishing rights, you’ll still be able to generate the docs locally, but
 not publish them:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~
 mkdir project-name <span class="o">&amp;&amp;</span> <span class="nb">cd</span> project-name
 git clone git@github.com:&lt;github-username&gt;/&lt;project-name&gt;/&lt;document-repo&gt;.git
 </pre></div>
 </div>
 </li>
 <li><p class="first">For the cloned local repos, tell git about the upstream repo:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> sof-docs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> sof-docs
 git remote add upstream git@github.com:thesofproject/sof-docs.git
 </pre></div>
 </div>
 </li>
-<li><p class="first">If you haven&#8217;t done so already, be sure to configure git with your name
+<li><p class="first">If you haven’t done so already, be sure to configure git with your name
 and email address for the signed-off-by line in your commit messages:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;David Developer&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;David Developer&quot;</span>
 git config --global user.email <span class="s2">&quot;david.developer@company.com&quot;</span>
 </pre></div>
 </div>
@@ -309,72 +309,72 @@ creating drawings:</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The plantuml extension uses Java to render the uml drawing
-syntax into an image. You&#8217;ll need to have a Java runtime environment
+syntax into an image. You’ll need to have a Java runtime environment
 (JRE) installed when generating documentation.</p>
 </div>
 <p>Depending on your Linux version, install the needed tools:</p>
 <ul>
 <li><p class="first">For Ubuntu use:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo apt-get install doxygen python3-pip python3-wheel make default-jre
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install doxygen python3-pip python3-wheel make default-jre
 </pre></div>
 </div>
 </li>
 <li><p class="first">For Fedora use:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo dnf install doxygen python3-pip python3-wheel make default-jre
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo dnf install doxygen python3-pip python3-wheel make default-jre
 </pre></div>
 </div>
 </li>
 </ul>
 <p>And for either Linux environment, install the remaining python-based
 tools:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/thesofproject/sof-docs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/thesofproject/sof-docs
 pip3 install --user -r scripts/requirements.txt
 </pre></div>
 </div>
-<p>And with that you&#8217;re ready to generate the documentation.</p>
+<p>And with that you’re ready to generate the documentation.</p>
 </div>
 <div class="section" id="documentation-presentation-theme">
 <h2>Documentation presentation theme<a class="headerlink" href="#documentation-presentation-theme" title="Permalink to this headline">¶</a></h2>
 <p>Sphinx supports easy customization of the generated documentation
 appearance through the use of themes.  Replace the theme files and do
-another <code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code> and the output layout and style is changed.
-The <code class="docutils literal"><span class="pre">read-the-docs</span></code> theme is installed as part of the
-<code class="docutils literal"><span class="pre">requirements.txt</span></code> list above.</p>
+another <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> and the output layout and style is changed.
+The <code class="docutils literal notranslate"><span class="pre">read-the-docs</span></code> theme is installed as part of the
+<code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> list above.</p>
 </div>
 <div class="section" id="running-the-documentation-processors">
 <h2>Running the documentation processors<a class="headerlink" href="#running-the-documentation-processors" title="Permalink to this headline">¶</a></h2>
 <p>The sof-docs directory has all the .rst source files, extra tools, and Makefile for
 generating a local copy of the SOF technical documentation.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/thesofproject/sof-docs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/thesofproject/sof-docs
 make html
 </pre></div>
 </div>
 <p>Depending on your development system, it will take about 10 seconds to
 collect and generate the HTML content.  When done, you can view the HTML
-output with your browser started at <code class="docutils literal"><span class="pre">~/thesofproject/sof-docs/_build/html/index.html</span></code></p>
+output with your browser started at <code class="docutils literal notranslate"><span class="pre">~/thesofproject/sof-docs/_build/html/index.html</span></code></p>
 </div>
 <div class="section" id="publishing-content">
 <h2>Publishing content<a class="headerlink" href="#publishing-content" title="Permalink to this headline">¶</a></h2>
 <p>If you have merge rights to the thesofproject repo called
 thesofproject.github.io, you can update the public project documentation
 found at <a class="reference external" href="https://thesofproject.github.io">https://thesofproject.github.io</a>.</p>
-<p>You&#8217;ll need to do a one-time clone of the upstream repo (we publish
+<p>You’ll need to do a one-time clone of the upstream repo (we publish
 directly to the upstream repo rather than to a personal forked copy):</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/thesofproject
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/thesofproject
 git clone git@github.com:thesofproject/thesofproject.github.io.git
 </pre></div>
 </div>
-<p>Then, after you&#8217;ve verified the generated HTML from <code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code> looks
+<p>Then, after you’ve verified the generated HTML from <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> looks
 good, you can push directly to the publishing site with:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>make publish
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make publish
 </pre></div>
 </div>
-<p>This will delete everything in the publishing repo&#8217;s <strong>latest</strong> folder
+<p>This will delete everything in the publishing repo’s <strong>latest</strong> folder
 (in case the new version has
 deleted files) and push a copy of the newly-generated HTML content
 directly to the GitHub pages publishing repo.  The public site at
 <a class="reference external" href="https://thesofproject.github.io">https://thesofproject.github.io</a> will be updated within a few minutes
-so it&#8217;s best to verify the locally generated html before publishing.</p>
+so it’s best to verify the locally generated html before publishing.</p>
 </div>
 </div>
 
@@ -389,7 +389,7 @@ so it&#8217;s best to verify the locally generated html before publishing.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018.
+        &copy; Copyright 2018
       Last updated on Dec 19, 2018.
 
     </p>
@@ -408,20 +408,23 @@ so it&#8217;s best to verify the locally generated html before publishing.</p>
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../',
-            VERSION:'0.1',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'0.1',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
 
   
 

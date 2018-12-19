@@ -245,10 +245,10 @@ please see the prework below.</p>
 <li><p class="first">Extract document template to a directory and push it to your GitHub.com
 documenation repository: <a class="reference external" href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/</a>.</p>
 </li>
-<li><p class="first">Create a directory called &#8220;website&#8221; at the same level where repository
-was extracted. This will be the target for the &#8220;make publish&#8221; command
+<li><p class="first">Create a directory called “website” at the same level where repository
+was extracted. This will be the target for the “make publish” command
 later. The final directory structure should look like this:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>&lt;projectname&gt;/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;projectname&gt;/
    doc-source
    website
 </pre></div>
@@ -256,10 +256,10 @@ later. The final directory structure should look like this:</p>
 </li>
 <li><p class="first">Set up a clean a new GitHub pages repository for your organization
 called: &lt;projectname&gt;.github.intel.com. Add a file called .nojekyll to
-top level of your GitHub pages repo rather than a &#8220;README.md&#8221; to make
+top level of your GitHub pages repo rather than a “README.md” to make
 sure HTML is rendered correctly.</p>
 </li>
-<li><p class="first">git clone the GitHub pages repository to your &#8220;website&#8221; directory.</p>
+<li><p class="first">git clone the GitHub pages repository to your “website” directory.</p>
 </li>
 <li><p class="first">Make sure the master branch of the github.io repo has github pages
 publishing enabled. There can be only one.</p>
@@ -269,7 +269,7 @@ publishing enabled. There can be only one.</p>
 <li><p class="first">TOC trees need to be in the index.rst at each level to define the
 site structure. For example, this is the TOC tree used to generate
 this site:</p>
-<div class="highlight-rest"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
    <span class="nc">:maxdepth:</span> <span class="nf">1</span>
 
    introduction/index.rst
@@ -287,7 +287,7 @@ images are collected in one directory: all the image filenames must be
 unique</p>
 </li>
 <li><p class="first">Modify conf.py to reflect your project:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># General information about the project.</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># General information about the project.</span>
 <span class="nv">project</span> <span class="o">=</span> u<span class="s1">&#39;&lt;project name&gt;&#39;</span>
 <span class="nv">copyright</span> <span class="o">=</span> u<span class="s1">&#39;&lt;year&gt;, &lt;project name&gt;&#39;</span>
 <span class="nv">author</span> <span class="o">=</span> u<span class="s1">&#39;&lt;project name&gt; developers&#39;</span>
@@ -295,7 +295,7 @@ unique</p>
 </div>
 </li>
 <li><p class="first">Modify substitutions.txt to reflect your project:</p>
-<div class="highlight-rest"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">|PN|</span> <span class="ow">replace</span><span class="p">::</span> <span class="nt">&lt;project name&gt;</span>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">|PN|</span> <span class="ow">replace</span><span class="p">::</span> <span class="nt">&lt;project name&gt;</span>
 
 <span class="p">..</span> <span class="nt">|LPN|</span> <span class="ow">replace</span><span class="p">::</span> <span class="nt">&lt;long project name&gt;</span>
 
@@ -313,7 +313,7 @@ repository directory</p>
 </li>
 <li><p class="first">Replace logos and favicon in /images with your project logos</p>
 </li>
-<li><p class="first">Run &#8220;make clean&#8221; to remove any previously generated HTML.</p>
+<li><p class="first">Run “make clean” to remove any previously generated HTML.</p>
 </li>
 <li><p class="first">Regenerate the HTML with Sphinx: make html</p>
 </li>
@@ -334,7 +334,7 @@ repository directory</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018.
+        &copy; Copyright 2018
       Last updated on Dec 19, 2018.
 
     </p>
@@ -353,20 +353,23 @@ repository directory</p>
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../',
-            VERSION:'0.1',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'0.1',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
 
   
 
