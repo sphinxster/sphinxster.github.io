@@ -1,7 +1,7 @@
 .. _introduction:
 
-Introduction to the |PN| Project
-################################
+Available bundles 
+#################
 
 Bundle list
 ===========
